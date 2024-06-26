@@ -1,5 +1,5 @@
-const Article = require("../models/Article");
-const cloudinary = require("../config/cloudinary");
+const Article = require("../../models/Article");
+const cloudinary = require("../../config/cloudinary");
 
 const createArticle = async (req, res) => {
   try {
@@ -15,7 +15,6 @@ const createArticle = async (req, res) => {
 
     // Sauvegarde de l'article dans la base de données
     await Article.create(newArticle);
-    
 
     res
       .status(201)
