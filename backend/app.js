@@ -22,6 +22,7 @@ app.use("/api/activity", activityRoutes);
 
 
 
+
 connectDB()
   .then(() => {
     // Start the server only if the DB connection is successful
