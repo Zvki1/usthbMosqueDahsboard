@@ -17,6 +17,7 @@ const articleSchema = new mongoose.Schema({
         type: Boolean,
         default: true,
     },
+    
 });
 
 module.exports = mongoose.model('Article', articleSchema);

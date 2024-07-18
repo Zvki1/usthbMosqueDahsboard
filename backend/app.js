@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 
 // import the routes
 const articleRoutes = require("./routes/ArticleRoutes");
+const submnissionRoutes = require ("./routes/SubmissionRoutes")
 
 
 dotenv.config();
@@ -11,6 +12,9 @@ const app = express();
 app.use(express.json());
 
 app.use("/api/articles", articleRoutes);
+app.use("/api/submissions", submnissionRoutes);
+
+
 
 
 
