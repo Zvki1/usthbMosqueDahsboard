@@ -6,6 +6,7 @@ const dotenv = require("dotenv");
 const articleRoutes = require("./routes/ArticleRoutes");
 const submissionRoutes = require ("./routes/SubmissionRoutes")
 const activityRoutes =require ("./routes/AcvtivityRoutes")
+const lostItemRoutes = require("./routes/LostItemRoutes");
 
 dotenv.config();
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use("/api/articles", articleRoutes);
 app.use("/api/submissions", submissionRoutes);
 app.use("/api/activity", activityRoutes);
+app.use("/api/lostItems", lostItemRoutes);
 
 
 
