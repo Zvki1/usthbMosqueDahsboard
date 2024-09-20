@@ -5,7 +5,7 @@ const LostItemSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    description: {
+    paragraph: {
         type: String,
         required: false,
     },

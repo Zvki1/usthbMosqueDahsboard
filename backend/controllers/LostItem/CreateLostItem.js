@@ -5,7 +5,7 @@ const createLostItem = async (req, res) => {
     try {
         const newLostItem = {
             title: req.body.title,
-            description: req.body.description || "",
+            paragraph: req.body.paragraph || "",
             isSelected: req.body.isSelected || true,
         };
 
