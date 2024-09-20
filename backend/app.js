@@ -1,7 +1,7 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const dotenv = require("dotenv");
-
+const cors = require("cors");
 // import the routes
 const articleRoutes = require("./routes/ArticleRoutes");
 const submissionRoutes = require ("./routes/SubmissionRoutes")
@@ -11,7 +11,11 @@ const lostItemRoutes = require("./routes/LostItemRoutes");
 dotenv.config();
 const app = express();
 app.use(express.json());
+let corsOptions = {
+   origin : ['http://localhost:5173'],
+}
 
+app.use(cors(corsOptions))
 app.use("/api/articles", articleRoutes);
 app.use("/api/submissions", submissionRoutes);
 app.use("/api/activity", activityRoutes);
