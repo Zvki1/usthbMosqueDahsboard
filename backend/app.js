@@ -11,11 +11,11 @@ const lostItemRoutes = require("./routes/LostItemRoutes");
 dotenv.config();
 const app = express();
 app.use(express.json());
-let corsOptions = {
-   origin : ['http://localhost:5173','https://dashboard-one-lemon-94.vercel.app/'],
-}
+// let corsOptions = {
+//    origin : ['http://localhost:5173','https://dashboard-one-lemon-94.vercel.app/'],
+// }
 
-app.use(cors(corsOptions))
+app.use(cors());
 app.use("/api/articles", articleRoutes);
 app.use("/api/submissions", submissionRoutes);
 app.use("/api/activity", activityRoutes);
