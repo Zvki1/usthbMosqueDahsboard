@@ -7,10 +7,13 @@ const getActivity = require("../controllers/Activity/getActivity");
 const getActivityByID = require("../controllers/Activity/getActivityByID");
 const updateActivity = require("../controllers/Activity/updateActivity");
 const deleteActivity = require("../controllers/Activity/DeleteActivity");
+const getSelectedActivities = require("../controllers/Activity/getSelectedActivities");
 
 
 router.post("/", upload.single("image"), createActivity);
 router.get("/", getActivity);
+router.get("/selected", getSelectedActivities);
+
 router.get("/:id", getActivityByID);
 router.patch("/:id", upload.single("image"), updateActivity);
 router.delete("/:id", deleteActivity);

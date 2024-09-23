@@ -9,6 +9,7 @@ const getArticleById = require("../controllers/Articles/GetArticleById");
 const UpdateArticle = require("../controllers/Articles/UpdateArticle");
 const DeleteArticle = require("../controllers/Articles/DeleteArticle");
 
+
 router.post("/", upload.single("image"), createArticle);
 router.get("/", getArticles);
 // get article by id
